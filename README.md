@@ -32,6 +32,13 @@ First one is called uri link and latter is url link.If you want to remove suppor
 1.Use <a href="https://github.com/mit-cml/extension-template">Extension Template</a> to compile Java files.<br>
 2.Contact me with Java files in case you are unable to setup environment or compile files.
 
+### How it works?
+To check how it works, I opened browser and tried to load Kodular Community.Here is what I got:<br>
+<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/optimized/3X/2/f/2fa8ba8df1eeb0de02f0ac2f11d48ea7e7b7c661_2_281x500.png"><br>
+<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/optimized/3X/8/1/815dbfcd8e0958dffb7526b82b51972f309056b5_2_281x500.png"><br>
+<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/optimized/3X/6/3/63b498a4ff19a35dd66de0732fec2fb4741c0b4d_2_281x500.png"><br>
+
+
 ## References
 1.<a href="https://code.tutsplus.com/tutorials/how-to-enable-deep-links-on-android--cms-26317#">TutsPlus Tutorial</a><br>
 2.<a href="https://medium.com/@saitwalshreyash19/writing-extensions-for-app-inventor-2-and-kodular-7d20092bff16?sk=1e2ce3fa85dd781c002c78c75ce83ccd">Guide by Shreyash on how to setup environment</a>
