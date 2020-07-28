@@ -26,4 +26,12 @@ Now you have to add your desired `scheme` and `host` in `DataElement`.<br>
 I have defined two of them:<br>
 ![image](https://user-images.githubusercontent.com/41724811/88658535-39954100-d0f1-11ea-8d2a-b25f9c0ae4c4.png)<br>
 In above case, your app will be triggered if user clicks a link which starts with either `deepLink://Screen1` or `https://community.kodular.io`.<br>
+First one is called uri link and latter is url link.If you want to remove support of anyone from your app then simply comment(add // before line) and that compiler will ignore that line.
 
+## Compile Modified Version
+1.Use <a href="https://github.com/mit-cml/extension-template">Extension Template</a> to compile Java files.<br>
+2.Contact me with Java files in case you are unable to setup environment or compile files.
+
+## References
+1.<a href="https://code.tutsplus.com/tutorials/how-to-enable-deep-links-on-android--cms-26317#">TutsPlus Tutoria</a><br>
+2.<a href="https://medium.com/@saitwalshreyash19/writing-extensions-for-app-inventor-2-and-kodular-7d20092bff16?sk=1e2ce3fa85dd781c002c78c75ce83ccd">Guide by Shreyash on how to setup environment</a>
