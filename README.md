@@ -33,5 +33,5 @@ First one is called uri link and latter is url link.If you want to remove suppor
 2.Contact me with Java files in case you are unable to setup environment or compile files.
 
 ## References
-1.<a href="https://code.tutsplus.com/tutorials/how-to-enable-deep-links-on-android--cms-26317#">TutsPlus Tutoria</a><br>
+1.<a href="https://code.tutsplus.com/tutorials/how-to-enable-deep-links-on-android--cms-26317#">TutsPlus Tutorial</a><br>
 2.<a href="https://medium.com/@saitwalshreyash19/writing-extensions-for-app-inventor-2-and-kodular-7d20092bff16?sk=1e2ce3fa85dd781c002c78c75ce83ccd">Guide by Shreyash on how to setup environment</a>
