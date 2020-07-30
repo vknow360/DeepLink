@@ -25,12 +25,17 @@ Lets breakdown each element.<br>
 Now you have to add your desired `scheme` and `host` in `DataElement`.<br>
 I have defined two of them:<br>
 ![image](https://user-images.githubusercontent.com/41724811/88658535-39954100-d0f1-11ea-8d2a-b25f9c0ae4c4.png)<br>
-In above case, your app will be triggered if user clicks a link which starts with either `deepLink://Screen1` or `https://community.kodular.io`.<br>
+In above case, your app will be triggered if user clicks a link which starts with one of the following:<br>
+1.`appinventor://DeepLink`<br>
+2.`https://community.kodular.io`.<br>
+3.`https://DeepLink`<br>
+4.`appinventor://community.appinventor.mit.edu`
 First one is called uri link and latter is url link.If you want to remove support of anyone from your app then simply comment(add // before line) and that compiler will ignore that line.
 
 ## Compile Modified Version
 1.Use <a href="https://github.com/mit-cml/extension-template">Extension Template</a> to compile Java files.<br>
-2.Contact me with Java files in case you are unable to setup environment or compile files.
+2.Use <a href="https://editor.appybuilder.com/">Appy Builder Code Editor</a> to compile files
+3.Contact me with Java files in case you are unable to setup environment or compile files.
 
 ### How it works?
 To check how it works, I opened browser and tried to load Kodular Community.Here is what I got:<br>
