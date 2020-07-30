@@ -12,6 +12,10 @@ import com.google.appinventor.components.runtime.Component;
 import com.google.appinventor.components.runtime.ComponentContainer;
 import com.google.appinventor.components.annotations.androidmanifest.*;
 import com.google.appinventor.components.annotations.UsesActivities;
+/*
+* @author vknow360 aka Sunny Gupta
+* Contributed by meatomdeveloper
+*/
 @DesignerComponent(version = 2, description ="Adds deep link support<br> Developed by Sunny Gupta", category = ComponentCategory.EXTENSION, nonVisible = true, iconName = "https://res.cloudinary.com/andromedaviewflyvipul/image/upload/c_scale,h_20,w_20/v1571472765/ktvu4bapylsvnykoyhdm.png")
 @UsesActivities(activities = {@ActivityElement(intentFilters = {@IntentFilterElement(actionElements = {@ActionElement(name = "android.intent.action.VIEW")}, categoryElements = {@CategoryElement(name = "android.intent.category.DEFAULT"), @CategoryElement(name = "android.intent.category.BROWSABLE")}, dataElements = {@DataElement(scheme = "appinventor",host="DeepLink"), @DataElement(scheme = "https",host="community.appinventor.mit.edu")})},name="com.sunny.DeepLink.DeepLink$DeepActivity")})
 @SimpleObject(external=true)
