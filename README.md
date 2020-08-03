@@ -40,7 +40,7 @@ First one is called uri link and latter is url link.If you want to remove suppor
 **Note**
 If you want to use Code Editor then you will have to change few things.<br>
 1.Remove package name<br>
-2.<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/original/3X/2/2/22cb98cbb8bf3a6f3e3bb60a4caa807f725f1036.png"<br>
+2.<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/original/3X/2/2/22cb98cbb8bf3a6f3e3bb60a4caa807f725f1036.png"><br>
 Replace above line with `com.appybuilder.`+ your email without @ part+ `DeepLink$DeepActivity`
 
 ### How it works?
