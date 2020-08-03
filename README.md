@@ -37,6 +37,12 @@ First one is called uri link and latter is url link.If you want to remove suppor
 2.Use <a href="https://editor.appybuilder.com/">Appy Builder Code Editor</a> to compile files
 3.Contact me with Java files in case you are unable to setup environment or compile files.
 
+**Note**
+If you want to use Code Editor then you will have to change few things.<br>
+1.Remove package name<br>
+2.<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/original/3X/2/2/22cb98cbb8bf3a6f3e3bb60a4caa807f725f1036.png"<br>
+Replace above line with `com.appybuilder.`+ your email without @ part+ `DeepLink$DeepActivity`
+
 ### How it works?
 To check how it works, I opened browser and tried to load Kodular Community.Here is what I got:<br>
 <img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/optimized/3X/2/f/2fa8ba8df1eeb0de02f0ac2f11d48ea7e7b7c661_2_281x500.png"><br>
