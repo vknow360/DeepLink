@@ -33,9 +33,10 @@ In above case, your app will be triggered if user clicks a link which starts wit
 First one is called uri link and latter is url link.If you want to remove support of anyone from your app then simply comment(add // before line) and that compiler will ignore that line.
 
 ## Compile Modified Version
-1.Use <a href="https://github.com/mit-cml/extension-template">Extension Template</a> to compile Java files.<br>
-2.Use <a href="https://editor.appybuilder.com/">Appy Builder Code Editor</a> to compile files
-3.Contact me with Java files in case you are unable to setup environment or compile files.
+1.Use <a href="https://github.com/mit-cml/extension-template">Extension Template</a> to compile Java files<br>
+2.Use <a href="https://editor.appybuilder.com/">Appy Builder Code Editor</a> to compile files<br>
+3.Use <a href="https://deep-link.000webhostapp.com/">this </a> website to get aix with desired deep link support<br>
+4.Contact me with Java files in case you are unable to setup environment or compile files<br>
 
 **Note**
 If you want to use Code Editor then you will have to change few things.<br>
