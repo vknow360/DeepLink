@@ -1,57 +1,209 @@
-# DeepLink
-Add deep link support to apps (For MIT AI2 and its distros)
+# DeepLink Extension
 
-## Introduction
-Deep Link feature is one of most requested feature on all app inventor distros.This extension enables you to add deep link support to your app without coding and modifying manifest file.The only thing you have to do is to add your own scheme and host.
+An App Inventor 2 extension for handling deep links and URL schemes in your applications. This extension allows your App Inventor app to respond to custom URLs and web links, enabling seamless navigation from web browsers, other apps, or sharing links.
 
-## What is Deep Link?
-Deeplinks are a concept that help users navigate between the web and applications. They are basically URLs which navigate users directly to the specific content in applications.                                      <br><a href="https://medium.com/@muratcanbur/intro-to-deep-linking-on-android-1b9fe9e38abd">Learn More on Medium</a>
-## How to add Deep Link support?
-This is the quite complicated part because you should be familiar with Java and XML to do this.You can find a lot of tutorials on Internet to add deep links support.Kindly note that it will be not easier for you if you are a AI2 user.<br>
-But as you know my <a href="https://github.com/vknow360/CustomWebView/"> Custom WebView</a> extension is able to add your app in browser's list so I modified its source in such a way that your app will only appear in browser's list for specific links.<br>
-So lets get started.<br>
-1.Open <a href="https://github.com/vknow360/DeepLink/blob/master/DeepLink.java">DeepLink.java</a> file.<br>
-2.Navigate to `UsesActivities` annotation.<br>
-You will see something like this:<br>
-![image](https://user-images.githubusercontent.com/41724811/88656866-980cf000-d0ee-11ea-9cc1-8df0b096043e.png)<br>
-Lets breakdown each element.<br>
-(i) `UsesActivities` defines which activities will be added in Manifest file by Compiler.<br>
-(ii) `ActvityElement` adds activity element.<br>
-(iii) `IntentFilterElement` adds intent filter to activity.<br>
-(iv) `ActionElement` adds action element to intent filter.<br>
-(v) `CategoryElement` specifies category in activity element.<br>
-(vi) `DataElement` specifies data elements in activity.<br>
-<br>
-Now you have to add your desired `scheme` and `host` in `DataElement`.<br>
-I have defined two of them:<br>
-![image](https://user-images.githubusercontent.com/41724811/88658535-39954100-d0f1-11ea-8d2a-b25f9c0ae4c4.png)<br>
-In above case, your app will be triggered if user clicks a link which starts with one of the following:<br>
-1.`appinventor://DeepLink`<br>
-2.`https://community.kodular.io`.<br>
-3.`https://DeepLink`<br>
-4.`appinventor://community.appinventor.mit.edu`
-First one is called uri link and latter is url link.If you want to remove support of anyone from your app then simply comment(add // before line) and compiler will ignore that line.
+## Features
 
-## Compile Modified Version
-1.Use <a href="https://github.com/mit-cml/extension-template">Extension Template</a> to compile Java files<br>
-2.Use <a href="https://editor.appybuilder.com/">Appy Builder Code Editor</a> to compile files<br>
-3.Use <a href="https://deep-link.000webhostapp.com/">this </a> website to get aix with desired deep links support<br>
-4.Contact me with Java files in case you are unable to setup environment or compile files<br>
+-   🔗 **Deep Link Handling**: Handle custom URL schemes and web links
+-   📱 **Screen Registration**: Register specific screens to handle deep link navigation
+-   🌐 **Domain Verification**: Check and manage domain verification status
+-   📲 **Resume Events**: Get notified when your app is opened via a deep link
+-   ⚙️ **Link Settings**: Direct users to system settings for link handling preferences
 
-**Note**
-If you want to use AppyBuilder Code Editor then you will have to change few things which are as follows:<br>
-1.Remove package name<br>
-2.<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/original/3X/2/2/22cb98cbb8bf3a6f3e3bb60a4caa807f725f1036.png"><br>
-Replace above line with `com.appybuilder.`+ your email without @ part+ `DeepLink$DeepActivity`
+## Installation
 
-### How it works?
-It opens Screen1 of your app with the URL as start value.
-To check how it works, I opened browser and tried to load Kodular Community.Here is what I got:<br>
-<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/optimized/3X/2/f/2fa8ba8df1eeb0de02f0ac2f11d48ea7e7b7c661_2_281x500.png"><br>
-<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/optimized/3X/8/1/815dbfcd8e0958dffb7526b82b51972f309056b5_2_281x500.png"><br>
-<img src="https://kodular-community.s3.dualstack.eu-west-1.amazonaws.com/optimized/3X/6/3/63b498a4ff19a35dd66de0732fec2fb4741c0b4d_2_281x500.png"><br>
+### Option 1: Compile Source Using Rush
 
+To build the extension from source code:
 
-## References
-1.<a href="https://code.tutsplus.com/tutorials/how-to-enable-deep-links-on-android--cms-26317#">TutsPlus Tutorial</a><br>
-2.<a href="https://medium.com/@saitwalshreyash19/writing-extensions-for-app-inventor-2-and-kodular-7d20092bff16?sk=1e2ce3fa85dd781c002c78c75ce83ccd">Guide by Shreyash on how to setup environment</a>
+1. **Install Rush CLI**: Download and install Rush CLI from [rush-cli repository](https://github.com/ShreyashSaitwal/rush-cli)
+2. **Clone/Download**: Get the source code of this DeepLink extension
+3. **Customize**: Modify the `AndroidManifest.xml` to match your domain/URL scheme
+4. **Build**: Run `rush build` in the project directory
+5. **Import**: The generated `.aix` file will be in the `out/` directory - import it into App Inventor
+
+### Option 2: Generate AIX File Online
+
+Use the online tool to generate a customized extension:
+
+**🔗 [Generate AIX File - https://sunnythedeveloper.in/tools/deeplink](https://sunnythedeveloper.in/tools/deeplink)**
+
+This tool allows you to:
+
+-   Customize the deep link URLs for your domain
+-   Configure your own URL schemes
+-   Generate a personalized `.aix` file with your specific settings
+-   Modify the extension to work with your website or app ecosystem
+
+Simply visit the link above, enter your domain details, and download your customized DeepLink extension.
+
+## Usage
+
+### Basic Setup
+
+1. Add the DeepLink component to your screen (it's a non-visible component)
+2. Configure your app's deep link settings using the provided functions
+
+### Functions
+
+#### `RegisterScreen(screenName, startValue)`
+
+Registers a specific screen to handle deep link navigation.
+
+**Parameters:**
+
+-   `screenName` (String): The name of the screen that should handle the deep link
+-   `startValue` (String): Initial value to pass to the screen when opened via deep link
+
+**Example:**
+
+```blocks
+DeepLink.RegisterScreen("Screen2", "welcome_from_link")
+```
+
+#### `GetStartUrl()`
+
+Returns the URL that started the current activity.
+
+**Returns:** String - The deep link URL or empty string if none
+
+**Example:**
+
+```blocks
+when Screen.Initialize do
+  set label.Text to DeepLink.GetStartUrl
+end
+```
+
+#### `VerifyDeepLink()`
+
+Opens the system settings page where users can configure which links your app should handle.
+
+**Example:**
+
+```blocks
+when Button.Click do
+  DeepLink.VerifyDeepLink
+end
+```
+
+#### `IsLinkHandlingAllowed()`
+
+Checks if your app is currently allowed to handle domain links.
+
+**Returns:** Boolean - True if link handling is enabled, false otherwise
+
+**Example:**
+
+```blocks
+when Screen.Initialize do
+  if DeepLink.IsLinkHandlingAllowed then
+    set StatusLabel.Text to "Link handling is enabled"
+  else
+    set StatusLabel.Text to "Link handling is disabled"
+  end if
+end
+```
+
+### Events
+
+#### `OnResume(url)`
+
+Triggered when the app is resumed and provides the URL that started the activity.
+
+**Parameters:**
+
+-   `url` (String): The deep link URL or empty string if none
+
+**Example:**
+
+```blocks
+when DeepLink.OnResume do
+  if get url ≠ "" then
+    set UrlLabel.Text to get url
+    // Handle the deep link URL
+  end if
+end
+```
+
+## Configuration
+
+### Android Manifest Setup
+
+The extension automatically handles the Android Manifest configuration. By default, it's configured to handle:
+
+-   **HTTP/HTTPS links**: `http://sunnythedeveloper.in` and `https://sunnythedeveloper.in`
+-   **Custom schemes**: You can modify the manifest to add your own custom URL schemes
+
+### Domain Verification
+
+For HTTPS links to work properly, you need to:
+
+1. Add a `assetlinks.json` file to your domain's `/.well-known/` directory
+2. Configure the file to include your app's package name and signing certificate
+3. Use the `VerifyDeepLink()` function to help users enable link handling
+
+## Example Implementation
+
+Here's a complete example of how to use the DeepLink extension:
+
+### Screen1 (Main Screen)
+
+```blocks
+when Screen1.Initialize do
+  DeepLink.RegisterScreen("Screen1", "main_screen")
+  set StartUrlLabel.Text to DeepLink.GetStartUrl
+end
+
+when DeepLink.OnResume do
+  if get url ≠ "" then
+    set NotificationLabel.Text to "Opened from: " + get url
+    // Parse the URL and navigate accordingly
+  end if
+end
+
+when SettingsButton.Click do
+  DeepLink.VerifyDeepLink
+end
+```
+
+## Common Use Cases
+
+1. **Social Media Sharing**: Allow users to share links that open specific content in your app
+2. **Email Marketing**: Include links in emails that open directly to relevant app sections
+3. **Cross-App Navigation**: Enable other apps to link to specific features in your app
+4. **Web-to-App**: Redirect users from your website to the mobile app
+
+## Troubleshooting
+
+### Links not opening in app
+
+1. Check if `IsLinkHandlingAllowed()` returns true
+2. Use `VerifyDeepLink()` to open system settings
+3. Verify domain verification is properly configured
+
+### App not receiving URL data
+
+1. Ensure `RegisterScreen()` is called with correct parameters
+2. Check that `OnResume` event is properly handled
+3. Verify the deep link URL format matches your configuration
+
+## Technical Details
+
+-   **Created with**: Rush CLI
+-   **Version**: 3
+-   **Author**: vknow360
+-   **Minimum Android**: API level varies based on domain verification features
+-   **Package**: com.sunny.deeplink
+
+## License
+
+This extension is created using Rush and has MIT License.
+
+## Support
+
+For issues, questions, or contributions, please refer to the App Inventor community forum.
+
+---
+
+_This extension enables powerful deep linking capabilities for your App Inventor applications, making them more integrated with the Android ecosystem and web._
